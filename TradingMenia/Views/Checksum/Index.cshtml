@@ -1,0 +1,20 @@
+﻿@model TradingMenia.Controllers.ChecksumController
+
+<h2>Generate Checksum</h2>
+
+<form method="post">
+    <div>
+        <br />
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" required />
+        <br />
+    </div>
+    <br />
+    <button type="submit">Generate Checksum</button>
+    <br />
+</form>
+
+@if (ViewData.ContainsKey("Checksum"))
+{
+    <h3 style="border:dashed; height:auto; width:auto">Checksum: @ViewData["Checksum"]</h3>
+}

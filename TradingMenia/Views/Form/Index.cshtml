@@ -1,0 +1,10 @@
+﻿@model string
+
+<h2>Enter your URL Link and Go to Login Page</h2>
+
+<form method="post" asp-action="Index" target="_blank">
+    <label for="url">Enter Login URL:</label>
+    <input type="text" id="url" name="url" value="@Model" />
+
+    <button type="submit">Open Login Page</button>
+</form>

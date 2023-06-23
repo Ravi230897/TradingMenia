@@ -1,0 +1,30 @@
+﻿@model TradingMenia.Controllers.ProfileController
+
+<h2>Get User Profile</h2>
+
+<form method="post">
+    <div>
+        <br />
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="requestToken">Request Token:</label>
+        <input type="text" id="requestToken" name="requestToken" required />
+        <br />
+    </div>
+    <br />
+    <button type="submit">Get Profile</button>
+</form>
+
+@if (ViewData.ContainsKey("UserProfile"))
+{
+    <h3 style="border:dashed; height:auto; width:auto">User Profile: @ViewData["UserProfile"]</h3>
+}
+
+@if (ViewData.ContainsKey("Error"))
+{
+    <h3 style="border:dashed; height:auto; width:auto">Error: @ViewData["Error"]</h3>
+}

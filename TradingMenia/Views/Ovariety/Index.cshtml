@@ -1,0 +1,74 @@
+﻿@model TradingMenia.Controllers.OvarietyController
+
+<h2>Place Order</h2>
+
+<form method="post">
+    <div>
+        <br/>
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="accessToken">Access Token:</label>
+        <input type="text" id="accessToken" name="accessToken" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="tradingSymbol">Trading Symbol:</label>
+        <input type="text" id="tradingSymbol" name="tradingSymbol" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="exchange">Exchange:</label>
+        <input type="text" id="exchange" name="exchange" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="transactionType">Transaction Type:</label>
+        <input type="text" id="transactionType" name="transactionType" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="orderType">Order Type:</label>
+        <input type="text" id="orderType" name="orderType" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="product">Product:</label>
+        <input type="text" id="product" name="product" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="validity">Validity:</label>
+        <input type="text" id="validity" name="validity" required />
+        <br />
+    </div>
+    <br />
+    <button type="submit">Place Order</button>
+    <br />
+</form>
+
+@if (ViewData.ContainsKey("Message"))
+{
+    <h3>@ViewData["Message"]</h3>
+}
+
+@if (ViewData.ContainsKey("Error"))
+{
+    <h3>Error: @ViewData["Error"]</h3>
+}
+

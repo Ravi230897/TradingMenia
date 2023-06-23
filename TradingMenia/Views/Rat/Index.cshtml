@@ -1,0 +1,32 @@
+﻿@model TradingMenia.Controllers.RatController
+
+<h2>Retreive All Trades</h2>
+
+<form method="post">
+    <div>
+        <br/>
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="accessToken">Access Token:</label>
+        <input type="text" id="accessToken" name="accessToken" required />
+        <br />
+    </div>
+    <br />
+    <button type="submit">Get Trades</button>
+    <br />
+</form>
+
+@if (ViewData.ContainsKey("Message"))
+{
+    <h3>@ViewData["Message"]</h3>
+}
+
+@if (ViewData.ContainsKey("Error"))
+{
+    <h3>Error: @ViewData["Error"]</h3>
+}
+

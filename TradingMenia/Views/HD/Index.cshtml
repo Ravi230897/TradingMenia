@@ -1,0 +1,48 @@
+﻿@model TradingMenia.Controllers.HDController
+
+<h2>Get Historical Data</h2>
+
+<form method="post">
+    <div>
+        <br/>
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="accessToken">Access Token:</label>
+        <input type="text" id="accessToken" name="accessToken" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="instrumentId">Instrument ID:</label>
+        <input type="number" id="instrumentId" name="instrumentId" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="from">From:</label>
+        <input type="datetime-local" id="from" name="from" required />
+        <br />
+    </div>
+    <div>
+        <br />
+        <label for="to">To:</label>
+        <input type="datetime-local" id="to" name="to" required />
+        <br />
+    </div>
+    <br />
+    <button type="submit">Get Historical Data</button>
+</form>
+
+@if (ViewData.ContainsKey("Message"))
+{
+    <h3>@ViewData["Message"]</h3>
+}
+
+@if (ViewData.ContainsKey("Error"))
+{
+    <h3>Error: @ViewData["Error"]</h3>
+}
